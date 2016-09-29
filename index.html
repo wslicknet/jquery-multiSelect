@@ -6,13 +6,13 @@
     <meta http-equiv="Cache-Control" content="no-cache"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <title>goods select unit</title>
-    <link rel="stylesheet" href="http://st.midea.com/pc/css/newbie/sherry_test.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <a class="js_select" href="javascript:;">选择商品</a>
 
-<div class="mod_layer_goods_select" id="goods_select1" style="display: none;">
+<div class="mod_layer_goods_select" id="goods_select" style="display: none;">
     <div class="mod_layer_inner">
         <div class="mod_layer_hd">
             <h3 class="mod_layer_tit">商品</h3>
@@ -40,10 +40,7 @@
                     <span class="ms-count">已选<span class="ms-count-num">0</span></span>
 
                     <ul class="ms-list">
-                        <li class="ms-elem-selectable" lSupplierSkuId="2207" supplyid="100411" data-id="100001"><span class="goods_total_num">(1)</span>500元礼品卡</li>
-                        <li class="ms-elem-selectable" lSupplierSkuId="93" supplyid="100398" data-id="100002"><span class="goods_total_num">(2)</span>美的 MB-FD409</li>
-                        <li class="ms-elem-selectable" lSupplierSkuId='33' title="11" supplyId='22'  data-id='44'><span class="goods_total_num">(0)</span>测试商品测试商品</li>
-                        <li class="ms-elem-selectable" lSupplierSkuId="2186" supplyid="100400" data-id="100004"><span class="goods_total_num">(2)</span>3吸油烟机（油烟机） CXW-200-DJ360R</li>
+                       
                     </ul>
                 </div>
             </div>
@@ -62,55 +59,11 @@
 </ul>
 
 
-<a class="js_select2" href="javascript:;">选择商品</a>
-
-<div class="mod_layer_goods_select" id="goods_select2" style="display: none;">
-    <div class="mod_layer_inner">
-        <div class="mod_layer_hd">
-            <h3 class="mod_layer_tit">商品</h3>
-            <a class="mod_layer_close" href="###">&times;</a>
-        </div>
-        <div class="mod_search_box">
-            <input type="text" placeholder="请输入商品名称" class="search_box_input">
-            <span class="li_search clear">查询</span>
-        </div>
-        <div class="mod_layer_bd">
-            <!--new-->
-            <div class="ms-container">
-                <div class="ms-content ms-selectable">
-                    <ul class="ms-list">
-                        <li class="ms-count">
-                            <input type="checkbox" class="li_ck_all">
-                            <span>全选</span>
-                            <span class="li_add">添加</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ms-content ms-selection">
-                    <span class="ms-count">已选<span class="ms-count-num">0</span></span>
-
-                    <ul class="ms-list">
-                        <li class="ms-elem-selectable" lSupplierSkuId="2207" supplyid="100411" data-id="100001"><span class="goods_total_num">(1)</span>500元礼品卡</li>
-                        <li class="ms-elem-selectable" lSupplierSkuId="93" supplyid="100398" data-id="100002"><span class="goods_total_num">(2)</span>美的 MB-FD409</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="mod_layer_ft">
-            <a class="mod_btn mod_btn_default select_cancel" href="###">取消</a>
-            <a class="mod_btn mod_btn_confirm select_confirm" href="###">确认</a>
-        </div>
-    </div>
-</div>
-
-<ul class="select_ul2" style="list-style: none;">
 
 
-</ul>
-
-<!--#include virtual="/sinclude/jsi/sherry_test.entrance.shtml"-->
-
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="goodsSelect.js"></script>
 
 
 

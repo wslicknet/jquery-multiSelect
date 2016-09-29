@@ -1,5 +1,3 @@
-define('goodsSelect', function(require, exports, module) {
-    var jQuery = $ = require("jquery");
 
     var GoodsSelect=function(options){
         this.options= $.extend({},GoodsSelect.defaults,options);
@@ -63,15 +61,13 @@ define('goodsSelect', function(require, exports, module) {
             $.ajax({
                 url:opts.url,
                 type: 'post',
-                data: { 'goodName': inputTxt},
+                data: { q: inputTxt},
                 timeout: 10000,
                 dataType: 'json',
                 success: function(data) {
-
-                    if (data.code === 0) {
-                        var arr = data.data[0];
+                    var arr=opts.responseData(data);
+                    if (arr.length) {
                         strhtml = '<li class="ms-count"><input type="checkbox"  class="li_ck_all"><span>全选</span><span class="li_add">添加</span></li>';
-
                         for (var i = 0; i < arr.length; i++) {
                             if($.inArray(arr[i][opts.keyIdName],self.rightIdArr) == -1){ //过滤已选择的元素
                                 self.leftIdArr.push(arr[i][opts.keyIdName]);
@@ -210,6 +206,13 @@ define('goodsSelect', function(require, exports, module) {
         title:'商品',  //浮层的title，例如“商品”、“人员”等
         placeholder: "请输入商品名称",
         url: "//fenxiao.midea.com/dealer/coupon/getGoodsInfo", //返回的数据必须是{errcode:0;data:[]}
+        paramsName:'goodsName',//get方法的参数名字
+        responseData:function(data){  //处理请求返回的data，return一个数组
+            var arr=[];
+            if (data.code === 0) {
+                return arr = data.data[0];
+            } 
+        },
         setLi:function(item){  //data-id属性标识唯一的li，必须有，且唯一
             return '<li class="ms-elem-selectable" data-id="'+item.lSkuId+'" lSupplierSkuId="'+item.lSupplierSkuId+'" supplyId="'+item.nSupplierId+'"><span class="goods_total_num">('+item.nSameSpuCount+')</span>'+item.strDisSkuTile+'<i></i></li>';
         },
@@ -227,5 +230,4 @@ define('goodsSelect', function(require, exports, module) {
         return new GoodsSelect(options);
     };
 
-});
 
