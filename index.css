@@ -1,0 +1,235 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, fieldset, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+body {
+  height: 100%;
+  min-width: 1002px;
+  background-color: #f4f4f4; }
+
+body, button, input, select, textarea, fieldset, label {
+  font: 12px/1.5 \5FAE\8F6F\96C5\9ED1, tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+.mod_layer_goods_select {
+  /*一些样式初始化*/
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  background: #fff;
+  width: 700px;
+  margin-left: -350px;
+  top: 100px; }
+  .mod_layer_goods_select input[type='text'] {
+    font-size: 12px;
+    border: #D6D6D6 solid 1px; }
+  .mod_layer_goods_select .clear:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .mod_layer_goods_select a {
+    text-decoration: none; }
+  .mod_layer_goods_select h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal; }
+  .mod_layer_goods_select .mod_layer_inner {
+    border: #D6D6D6 solid 1px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+    .mod_layer_goods_select .mod_layer_inner .mod_layer_hd {
+      position: relative;
+      height: 38px;
+      border: 1px solid #e3e3e3; }
+    .mod_layer_goods_select .mod_layer_inner .mod_layer_tit {
+      color: #3e3a39;
+      margin-left: 8px;
+      font-size: 14px;
+      line-height: 38px;
+      text-indent: 20px; }
+    .mod_layer_goods_select .mod_layer_inner .mod_layer_close {
+      position: absolute;
+      right: 15px;
+      top: 2px;
+      font-size: 20px;
+      color: #999999; }
+  .mod_layer_goods_select .mod_search_box {
+    height: 72px;
+    border-bottom: 1px solid #e3e3e3;
+    vertical-align: middle; }
+    .mod_layer_goods_select .mod_search_box .search_box_input {
+      margin: 24px 0 0 20px;
+      padding: 4px 6px;
+      width: 250px;
+      height: 21px;
+      line-height: 20px;
+      color: #555;
+      vertical-align: middle;
+      border-radius: 3px;
+      -webkit-border-radius: 3px; }
+    .mod_layer_goods_select .mod_search_box .li_search {
+      display: inline-block;
+      margin-top: 24px;
+      float: right;
+      margin-right: 324px;
+      vertical-align: middle;
+      background: #0093d5;
+      color: #fff;
+      cursor: pointer;
+      width: 60px;
+      height: 28px;
+      text-align: center;
+      line-height: 27px;
+      border-radius: 4px; }
+  .mod_layer_goods_select .mod_layer_bd {
+    padding: 25px;
+    height: 310px;
+    overflow-y: auto; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container {
+      background: transparent url("//img.mdcdn.cn/pc/img/fenxiao/arr_right.png") no-repeat 50% 50%;
+      width: 646px; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container:after {
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      clear: both;
+      min-height: 0;
+      visibility: hidden; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selectable, .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selection {
+      background: #fff;
+      color: #555555;
+      float: left;
+      width: 45%; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-content {
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+      transition: border linear 0.2s, box-shadow linear 0.2s;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      height: 308px;
+      position: relative;
+      padding: 0;
+      overflow-y: auto;
+      overflow-x: hidden; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selectable {
+      margin-right: 9%; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-list.ms-focus {
+      border-color: rgba(82, 168, 236, 0.8);
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      outline: 0;
+      outline: thin dotted \9; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 0; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-optgroup-container {
+      width: 100%; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-optgroup-label {
+      margin: 0;
+      padding: 5px 0px 0px 5px;
+      cursor: pointer;
+      color: #999; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-elem-selectable,
+    .mod_layer_goods_select .mod_layer_bd .ms-count {
+      padding: 5px 10px;
+      color: #3e3a39;
+      font-size: 12px;
+      width: 91%; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .selected-elem {
+      background-color: #e6edf4; }
+    .mod_layer_goods_select .mod_layer_bd .ms-count {
+      font-weight: bold; }
+      .mod_layer_goods_select .mod_layer_bd .ms-count span.li_add {
+        float: right;
+        width: 36px;
+        height: 20px;
+        background: #0093d5;
+        border-radius: 4px;
+        text-align: center;
+        color: #fff;
+        line-height: 19px;
+        cursor: pointer;
+        display: none; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-none {
+      padding: 5px 10px;
+      color: #3e3a39;
+      font-size: 12px;
+      width: 91%; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selectable li.ms-hover,
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selection li.ms-hover {
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      background-color: #08c; }
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selectable li.disabled,
+    .mod_layer_goods_select .mod_layer_bd .ms-container .ms-selection li.disabled {
+      background-color: #eee;
+      color: #aaa;
+      cursor: text; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-selectable, .mod_layer_goods_select .mod_layer_bd .ms-elem-selection {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-selectable:hover {
+      background: #e6edf4; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-selection:hover {
+      background: #f4e8b7; }
+    .mod_layer_goods_select .mod_layer_bd .ms-list .add, .mod_layer_goods_select .mod_layer_bd .ms-list .iclose {
+      position: absolute;
+      right: 4px;
+      top: 10px; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-selectable .add {
+      background: url("//img.mdcdn.cn/pc/img/fenxiao/add.png");
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-size: contain; }
+    .mod_layer_goods_select .mod_layer_bd .ms-elem-selection .iclose {
+      background: url("//img.mdcdn.cn/pc/img/fenxiao/close.png");
+      display: inline-block;
+      width: 11px;
+      height: 12px;
+      background-size: contain; }
+  .mod_layer_goods_select .mod_layer_ft {
+    padding: 20px 0;
+    border-top: #E3E3E3 solid 1px;
+    text-align: center; }
+    .mod_layer_goods_select .mod_layer_ft .mod_btn {
+      display: inline-block;
+      width: 118px;
+      margin-right: 15px;
+      text-align: center;
+      padding: 4px 10px;
+      border: #D6D6D6 solid 1px;
+      color: #333;
+      cursor: pointer;
+      border-radius: 3px;
+      background: #fff;
+      height: 24px;
+      line-height: 24px; }
+    .mod_layer_goods_select .mod_layer_ft .mod_btn_confirm {
+      background: #2478C0;
+      color: #fff;
+      border-color: #2478C0; }
+  .mod_layer_goods_select .goods_total_num {
+    color: #f30;
+    font-weight: bold; }
+
+/*# sourceMappingURL=sherry_test.css.map */

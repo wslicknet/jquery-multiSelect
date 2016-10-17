@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>goods select unit</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<a class="js_select" href="javascript:;">选择商品</a>
+
+<div class="mod_layer_goods_select" id="goods_select" style="display: none;">
+    <div class="mod_layer_inner">
+        <div class="mod_layer_hd">
+            <h3 class="mod_layer_tit">商品</h3>
+            <a class="mod_layer_close" href="###">&times;</a>
+        </div>
+        <div class="mod_search_box">
+            <input type="text" placeholder="请输入商品名称" class="search_box_input">
+            <span class="li_search clear">查询</span>
+        </div>
+        <div class="mod_layer_bd">
+            <!--new-->
+            <div class="ms-container">
+                <div class="ms-content ms-selectable">
+                    <ul class="ms-list">
+                        <li class="ms-count">
+                            <input type="checkbox" class="li_ck_all">
+                            <span>全选</span>
+                            <span class="li_add">添加</span>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="ms-content ms-selection">
+                    <span class="ms-count">已选<span class="ms-count-num">0</span></span>
+
+                    <ul class="ms-list">
+                       
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="mod_layer_ft">
+            <a class="mod_btn mod_btn_default select_cancel" href="###">取消</a>
+            <a class="mod_btn mod_btn_confirm select_confirm" href="###">确认</a>
+        </div>
+    </div>
+</div>
+
+<ul class="select_ul" style="list-style: none;">
+
+
+</ul>
+
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="goodsSelect.js"></script>
+
+
+
+</body>
+</html>
