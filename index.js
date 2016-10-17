@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 
     $(function() {
 
 
-=======
 define('sherry_test', function(require, exports, module) {
     var jQuery = $ = require("jquery");
      require("sherry_test01");
@@ -12,13 +11,12 @@ define('sherry_test', function(require, exports, module) {
 
     exports.init = function() {
 
->>>>>>> d33513ad4362aaa26bd2242bdbad0c73e659fdfd
         /**
          * 说明：selected-elem是左边全选之后的样式，可以自己定义。
          *
          */
 
-<<<<<<< HEAD
+
         // var $goodsSelect1=$('#goods_select1');
         // var goodsSelect= $.goodsSelect({
         //     id:$goodsSelect1,
@@ -103,7 +101,7 @@ define('sherry_test', function(require, exports, module) {
                     //填充到页面上
                     var selectHtml= $goodsSelect.find('.ms-selection').find('.ms-list').html();
                     $('.select_ul').html(selectHtml);
-=======
+
         var $goodsSelect1=$('#goods_select1');
         var goodsSelect= $.goodsSelect({
             id:$goodsSelect1,
@@ -152,23 +150,23 @@ define('sherry_test', function(require, exports, module) {
                     //填充到页面上
                     var selectHtml= $goodsSelect2.find('.ms-selection').find('.ms-list').html();
                     $('.select_ul2').html(selectHtml);
->>>>>>> d33513ad4362aaa26bd2242bdbad0c73e659fdfd
+
                 });
             }
         });
 
-<<<<<<< HEAD
+
         $('.js_select').on('click',function(){
             goodsSelect.show();
         });
     });
 
-=======
+
         $('.js_select2').on('click',function(){
             goodsSelect2.show();
         });
     };
 
 });
->>>>>>> d33513ad4362aaa26bd2242bdbad0c73e659fdfd
+
 
