@@ -10,10 +10,10 @@
                 var arr=[];
                 if (data['total_count']) {
                     return arr = data['items'];
-                } 
+                }
             },
             setLi:function(item){
-                return '<li class="ms-elem-selectable" data-id="'+item.id+'"><img src="'+item.owner.avatar_url+'">'+item.full_name+'</li>';
+                return '<li class="ms-elem-selectable" data-id="'+item.id+'"><img style="width:50px;vertical-align: middle;margin-right: 10px;" src="'+item.owner.avatar_url+'">'+item.full_name+'</li>';
             },
             keyIdName:'id', //接口中返回的唯一标识主键名称,例如：item中是lSupplierSkuId
             selectData:false,  //已选数据，必须是jQuery元素，li标签;没有时不填或填false
@@ -33,13 +33,3 @@
         $('.js_select').on('click',function(){
             goodsSelect.show();
         });
-
-
-
-        
-
-       
-    
-
-
-

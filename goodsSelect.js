@@ -57,17 +57,18 @@
             var self = this;
             var opts=this.options;
             var strhtml = '',liHtml='';
-            var inputTxt = $.trim(this.inputEle.val());
+            var inputTxt = $.trim(this.inputEle.val()) || '11';
             $.ajax({
                 url:opts.url,
-                type: 'post',
+                type: 'get',
+                // data: { q: inputTxt},
                 data: { q: inputTxt},
                 timeout: 10000,
                 dataType: 'json',
                 success: function(data) {
                     var arr=opts.responseData(data);
                     if (arr.length) {
-                        strhtml = '<li class="ms-count"><input type="checkbox"  class="li_ck_all"><span>全选</span><span class="li_add">添加</span></li>';
+                        strhtml = '<li class="ms-count"><input type="checkbox" class="li_ck_all"><span>全选</span><span class="li_add">添加</span></li>';
                         for (var i = 0; i < arr.length; i++) {
                             if($.inArray(arr[i][opts.keyIdName],self.rightIdArr) == -1){ //过滤已选择的元素
                                 self.leftIdArr.push(arr[i][opts.keyIdName]);
@@ -211,7 +212,7 @@
             var arr=[];
             if (data.code === 0) {
                 return arr = data.data[0];
-            } 
+            }
         },
         setLi:function(item){  //data-id属性标识唯一的li，必须有，且唯一
             return '<li class="ms-elem-selectable" data-id="'+item.lSkuId+'" lSupplierSkuId="'+item.lSupplierSkuId+'" supplyId="'+item.nSupplierId+'"><span class="goods_total_num">('+item.nSameSpuCount+')</span>'+item.strDisSkuTile+'<i></i></li>';
@@ -229,5 +230,3 @@
     $.goodsSelect=function(options){
         return new GoodsSelect(options);
     };
-
-
