@@ -38,6 +38,4 @@
         $('.js_select').on('click',function(){
             goodsSelect.show();
         });
-                });
-            }
-        });
+               
