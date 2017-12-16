@@ -206,7 +206,7 @@
         id:$('#goods_select1'),  //浮层
         title:'商品',  //浮层的title，例如“商品”、“人员”等
         placeholder: "请输入商品名称",
-        url: "//fenxiao.midea.com/dealer/coupon/getGoodsInfo", //返回的数据必须是{errcode:0;data:[]}
+        url: "xxxx", //返回的数据必须是{errcode:0;data:[]}
         paramsName:'goodsName',//get方法的参数名字
         responseData:function(data){  //处理请求返回的data，return一个数组
             var arr=[];
